@@ -24,7 +24,7 @@ DWORD WINAPI Thread(LPVOID(lpParametr))
     cout << i << " thread " << "start" <<endl;
     WaitForSingleObject(hEvents[i - 1], INFINITE);
     cout << i << " thread " << "done" << endl;
-    return 0;
+    return 0; //честный возврат из потоковой функции
 }
 
 void start()
@@ -52,7 +52,7 @@ void start()
         case 1 :
             if (hEvents.size() == 0)
             {
-                cout << "end of vector" << endl;
+                cout << "close programm" << endl;
                 Sleep(3000);
                 SetEvent(hConfirmEvent);
                 return;

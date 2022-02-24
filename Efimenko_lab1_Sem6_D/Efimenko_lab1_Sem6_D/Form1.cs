@@ -26,13 +26,14 @@ namespace Efimenko_lab1_Sem6_D
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            if (childProcess == null || childProcess.HasExited)
+            if (childProcess == null || childProcess.HasExited) //hasExited- процесс был завершен
             {
                 ProcessStartInfo info = new ProcessStartInfo();
                 info.FileName = "Efimenko_lab1_Sem6.exe";
                 info.WorkingDirectory = Environment.CurrentDirectory + "\\..\\..\\..\\..\\Debug";
                 childProcess = Process.Start(info);
                 listBox1.Items.Clear();
+
                 listBox1.Items.Add("Threads Count: 0");
                 listBox1.Items.Add("Main Thread");
 
