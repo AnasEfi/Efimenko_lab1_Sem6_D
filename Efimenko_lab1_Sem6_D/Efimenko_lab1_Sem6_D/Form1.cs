@@ -29,9 +29,9 @@ namespace Efimenko_lab1_Sem6_D
             if (childProcess == null || childProcess.HasExited) //hasExited- процесс был завершен
             {
                 ProcessStartInfo info = new ProcessStartInfo();
-                info.FileName = "Efimenko_lab1_Sem6.exe";
-                info.WorkingDirectory = Environment.CurrentDirectory + "\\..\\..\\..\\..\\Debug";
-                childProcess = Process.Start(info);
+                //info.FileName = "Efimenko_lab1_Sem6.exe";
+               //info.WorkingDirectory = Environment.CurrentDirectory + "\\..\\..\\..\\..\\Debug";
+                childProcess = Process.Start("Efimenko_lab1_Sem6.exe");
                 listBox1.Items.Clear();
 
                 listBox1.Items.Add("Threads Count: 0");
